@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class FAQChatbot {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== FAQ Chatbot =====");
+
+        while (true) {
+
+            System.out.println("\nAsk your question:");
+            String question = sc.nextLine().toLowerCase();
+
+            if (question.contains("timings")) {
+                System.out.println("College timings are 9 AM to 4 PM.");
+            }
+
+            else if (question.contains("hostel")) {
+                System.out.println("Hostel applications are available in the admin office.");
+            }
+
+            else if (question.contains("placement")) {
+                System.out.println("Placement office is in Block A.");
+            }
+
+            else if (question.contains("fees")) {
+                System.out.println("Fee details are available on the college website.");
+            }
+
+            else if (question.contains("exit")) {
+                System.out.println("Chatbot Closed Successfully.");
+                break;
+            }
+
+            else {
+                System.out.println("Sorry! I don't understand your question.");
+            }
+        }
+
+        sc.close();
+    }
+}
